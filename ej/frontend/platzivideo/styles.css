@@ -1,0 +1,291 @@
+/*MAIN*/
+body{
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    
+}
+.mainBody{
+    background-color: #8F57FD;
+    
+}
+/*HEADER*/
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #8F57FD;
+    /*Alinear los elementos con display flex*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__img{
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.header__menu{
+    margin-right: 30px;
+}
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+}
+.header__menu:hover ul,ul:hover{
+    display: block;
+}
+.header__menu li{
+    margin: 10px 0px;
+}
+.header__menu li a{
+    color: #fff;
+    text-decoration: none;
+}
+.header__menu li a:hover{
+    text-decoration: underline;
+}
+.header__menu--profile{
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+}
+.header__menu--profile img{
+    margin-right: 8px;
+    width: 40px;
+}
+.header__menu--profile p{
+    margin: 0px;
+    color: #fff;
+}
+/*BUSCADOR*/
+.main{
+    height: 300px;
+}
+.main__title{
+    color: #fff;
+    font-size: 25px;
+}
+.input{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    /*Corregir el paddding para que no sea tan gordo*/
+    padding: 0px 20px;
+    width: 70%;
+    outline: inherit;
+}
+::placeholder{
+    color: #fff;
+}
+.categories__title{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    padding-left: 30px;
+}
+/*CAROUSEL*/
+.carousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+}
+.carousel__container{
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom:10px;
+}
+.carousel-item{
+    /*INLINE-BLOCK ALINEA LOS ELEMENTOS A LA DERECHA*/
+    display: inline-block;
+    background-color: #fff;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    /*ARREGLO BORDE DE IMAGEN*/
+    overflow: hidden;
+    margin-right: 10px;
+    /*CAMBIO DE TIPO DE CURSOR*/
+    cursor: pointer;
+    /*CREAR UNA TRANSICIÓN MÁS LENTA, QUE SE ANIME AL CENTRO Y QUE COMIENZE DE IZQDA A DRCHA */
+    transition: 450ms;
+    transform-origin: center left;
+    /*PARA QUE CONTENGA LOS DETALLES DE LA CARD*/
+    position: relative;
+}
+/*TRANSFORMACIÓN CON HOVER*/
+.crousel__iteml:hover ~ .crousel__item {
+    /*CON SCROLL A LA DERECHA*/
+    transform: translate3d(100px, 0, 0);
+}
+/*OPACIDAD DE LOS ELEMENTOS EN HOVER*/
+.carousel__container:hover .carousel-item{
+    opacity: 0.3;
+}
+/*AUMENTAR EL TAMAÑO DE LAS IMÁGENES Y AGREGAR OPACIDAD NORMAL AL ELEMENTO SELECCIONADO*/
+.carousel__container:hover .carousel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+.carousel-item__details{
+    background: linear-gradient(to top, rgba (0, 0, 0, 0.9) 0%, rgba (0, 0, 0, 0) 100%,);
+    font-size: 10px;
+    opacity: 1;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left; 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*LOGIN*/
+.login{
+/*    background-color: linear-gradient(#AB88FF, #21C08B);*/
+    background-color: #8F57FD;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px)
+}
+.login__container{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 40px;
+    color: #fff;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.login__container--form{
+    display: flex;
+    flex-direction: column;
+}
+.login__container--form label{
+    font-size: 14px;
+}
+
+.login__container--remember-me{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;    
+}
+
+.login__container--remember-me a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login__container--remember-me a:hover{
+    text-decoration: underline;
+}
+.login__container--social-media > div{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.login__container--social-media > div > img{
+    width: 30px;
+    margin-right: 10px;
+}
+.login__container--register{
+    font-size: 14px;
+}
+.login__container--register a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login__container--register a:hover{
+    text-decoration: underline;
+}
+.input{
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px;
+}
+::placeholder{
+    color: #fff;
+}
+.button{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+.footer{
+    background-color: #8F57FD;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+}
+.footer a{
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+.login__container--login-register a{
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+/*MEDIAQUERYS*/
+@media only screen and (max-width: 600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

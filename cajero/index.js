@@ -1,10 +1,19 @@
+// IMÁGENES DE BILLTES
+var imagenes = [];
+imagenes ["500"] = "500.png";
+imagenes ["100"] = "100.png";
+imagenes ["50"] = "50.png";
+
 // CLASE DE BILLETES
 class Billete
     {
         constructor(valor, cantidad)
         {
+            this.imagen = new Image();
             this.valor = valor;
             this.cantidad = cantidad;
+            
+            this.imagen.src[this.valor];
         }
     }
 
