@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>Piedra Papel y Tijera</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
     <h1>Piedra, Papel & Tijeras</h1>
   </header>
   <div class="btn-container">  
-    <button id="restart" class="restart-btn">Reiniciar Juego</button>
+    <button id="restart" class="btn restart-btn">Reiniciar Juego</button>
   </div>
   <div class="score-board">
     <div id="user-badge" class="badge">Tú</div>
@@ -31,6 +32,12 @@
     </div>
   </div>
   <h2>¡Elige uno!</h2>
+  
+  <div class="btn-container">
+  <button onclick="window.location.href='go:ads'" class="restart-btn ads-btn">
+      <i class="fas fa-ad"></i> Estos anuncios podrían interesarte <i class="fas fa-ad"></i>
+  </button>
+  </div>
 
   <!-- Modal -->
   <div class="modal">

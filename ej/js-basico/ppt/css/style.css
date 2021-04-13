@@ -20,7 +20,7 @@ header{
   text-align: center;
 }
 
-.restart-btn {
+.restart-btn{
   color: white;
   background-color: transparent;
   border-radius: 12px;
@@ -29,6 +29,11 @@ header{
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.ads-btn{
+  padding: 10px 10px;
+  margin: 40px 0px; 
 }
 
 .restart-btn:hover{
